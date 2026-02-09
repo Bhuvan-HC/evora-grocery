@@ -1,8 +1,18 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/auth.css";
 
 const Auth = () => {
   const [mode, setMode] = useState("login");
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // TEMP: simulate successful login / registration
+    // Later this will be replaced by backend OTP verification
+    navigate("/dashboard");
+  };
 
   return (
     <div className="auth-wrapper">
@@ -14,11 +24,10 @@ const Auth = () => {
 
         <p className="auth-sub">
           {mode === "login"
-            ? "Login using your registered email and phone number"
-            : "Register your business to start bulk procurement"}
+            ? "Access your orders, prices and invoices"
+            : "Register your business for bulk procurement"}
         </p>
 
-        {/* TOGGLE */}
         <div className="auth-toggle">
           <button
             className={mode === "login" ? "active" : ""}
@@ -34,44 +43,31 @@ const Auth = () => {
           </button>
         </div>
 
-        {/* EMAIL */}
-        <div className="auth-field">
-          <label>Email Address</label>
-          <input
-            type="email"
-            required
-            placeholder="business@email.com"
-          />
-        </div>
-
-        {/* PHONE */}
-        <div className="auth-field">
-          <label>Mobile Number</label>
-          <input
-            type="tel"
-            required
-            placeholder="10-digit mobile number"
-          />
-        </div>
-
-        {/* REGISTER ONLY */}
-        {mode === "register" && (
+        <form onSubmit={handleSubmit}>
           <div className="auth-field">
-            <label>Business Name</label>
-            <input
-              type="text"
-              required
-              placeholder="Hotel / Caterer name"
-            />
+            <label>Email Address</label>
+            <input type="email" required />
           </div>
-        )}
 
-        <button className="auth-submit">
-          {mode === "login" ? "Login & Send OTP" : "Register & Send OTP"}
-        </button>
+          <div className="auth-field">
+            <label>Mobile Number</label>
+            <input type="tel" required />
+          </div>
+
+          {mode === "register" && (
+            <div className="auth-field">
+              <label>Business Name</label>
+              <input type="text" required />
+            </div>
+          )}
+
+          <button type="submit" className="auth-submit">
+            {mode === "login" ? "Login & Continue" : "Register & Continue"}
+          </button>
+        </form>
 
         <p className="auth-note">
-          Email and phone number are mandatory for verification and billing.
+          You will be redirected to dashboard after verification.
         </p>
 
       </div>

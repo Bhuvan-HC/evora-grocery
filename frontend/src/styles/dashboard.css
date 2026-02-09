@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --bg: #f9fafb;
+  --panel: #ffffff;
+  --text: #020617;
+  --muted: #64748b;
+  --accent: #16a34a;
+  --border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.dash-root {
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+/* TOP BAR */
+.dash-top {
+  height: 64px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.brand h1 {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.delivery-status {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.business-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* BODY */
+.dash-body {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+}
+
+/* SIDEBAR */
+.dash-sidebar {
+  background: var(--panel);
+  border-right: 1px solid var(--border);
+  padding: 20px;
+}
+
+.dash-sidebar nav a {
+  display: block;
+  padding: 10px 12px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  color: var(--text);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.dash-sidebar nav a.active {
+  background: #ecfdf5;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.dash-sidebar .logout {
+  margin-top: 20px;
+  color: #dc2626;
+}
+
+/* MAIN */
+.dash-main {
+  padding: 24px;
+}
+
+/* KPI STRIP */
+.kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.kpi-strip div {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 14px;
+}
+
+.kpi-label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.kpi-strip strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 18px;
+}
+
+/* PANELS */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.panel h2 {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+/* DELIVERY CARD */
+.delivery-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eta span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ACTIONS */
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.actions button {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #f8fafc;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.actions .primary {
+  background: var(--accent);
+  color: white;
+  border: none;
+}
+
+/* GRID */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.list li {
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+.dash-sidebar nav a,
+.delivery-status,
+.actions button,
+.kpi-strip strong,
+.panel h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
