@@ -1,0 +1,126 @@
+/* ===== ROOT RESET ===== */
+.intro-wrapper {
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== IMAGE ===== */
+.intro-image {
+  width: 90vw;
+  max-width: 500px;
+  margin-bottom: 80px;
+}
+
+/* ===== BUTTON GROUP ===== */
+.button-group {
+  display: flex;
+  gap: 40px;
+}
+
+/* =========================
+   EXPLORE BUTTON (ADVANCED)
+   ========================= */
+
+.btn-explore {
+  position: relative;
+  padding: 18px 56px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #ffffff;
+  background: #0b0b0b;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* animated gradient border */
+.btn-explore::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(
+    #22c55e,
+    #16a34a,
+    #4ade80,
+    #22c55e
+  );
+  animation: rotate 5s linear infinite;
+  z-index: -2;
+}
+
+/* inner core */
+.btn-explore::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: inherit;
+  background: #0b0b0b;
+  z-index: -1;
+}
+
+/* glow */
+.btn-explore:hover {
+  box-shadow: 0 0 60px rgba(34, 197, 94, 0.9);
+  transform: scale(1.08);
+}
+
+/* =========================
+   LOGIN BUTTON (GLASS)
+   ========================= */
+
+.btn-login {
+  position: relative;
+  padding: 18px 56px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #111;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(20px);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* light sweep */
+.btn-login::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+  transition: left 0.7s ease;
+}
+
+.btn-login:hover::before {
+  left: 100%;
+}
+
+.btn-login:hover {
+  transform: scale(1.08);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== KEYFRAMES ===== */
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
