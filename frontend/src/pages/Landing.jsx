@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import "../styles/landing.css";
 
 const Landing = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="landing">
 
@@ -35,7 +38,7 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* OPERATIONAL STATS */}
+      {/* STATS */}
       <section className="stats">
         <div className="stat">
           <h3>Daily Fulfilment</h3>
@@ -62,29 +65,25 @@ const Landing = () => {
           <div className="serve-card">
             <strong>Hotels & Resorts</strong>
             <p>
-              Consistent daily supply for breakfast, lunch and banquet
-              operations without procurement uncertainty.
+              Consistent daily supply for kitchen and banquet operations.
             </p>
           </div>
           <div className="serve-card">
             <strong>Caterers</strong>
             <p>
-              Bulk ordering for weddings, corporate events and large gatherings
-              with assured quantity and delivery timelines.
+              Bulk ordering for weddings, corporate events and gatherings.
             </p>
           </div>
           <div className="serve-card">
             <strong>Event Organizers</strong>
             <p>
-              One supplier for complete grocery needs, reducing coordination
-              with multiple vendors.
+              Centralised procurement without vendor coordination overhead.
             </p>
           </div>
           <div className="serve-card">
             <strong>Large Family Functions</strong>
             <p>
-              Transparent pricing and bulk quantities for functions without
-              retail overpricing.
+              Transparent bulk pricing without retail overcharging.
             </p>
           </div>
         </div>
@@ -95,38 +94,37 @@ const Landing = () => {
         <div>
           <h2>Why Businesses Switch to EVORA</h2>
           <p>
-            Traditional sourcing depends on local vendors, fluctuating prices,
-            and last-minute availability. EVORA replaces this with a structured,
-            data-backed procurement system designed for scale.
+            EVORA replaces unstructured local sourcing with predictable,
+            scalable and transparent procurement.
           </p>
 
           <ul style={{ marginTop: "14px", color: "#444" }}>
-            <li>• Reduced dependency on multiple local suppliers</li>
-            <li>• Predictable daily pricing</li>
+            <li>• Centralised ordering & billing</li>
+            <li>• Reduced vendor dependency</li>
+            <li>• Daily price visibility</li>
             <li>• Bulk-friendly logistics</li>
-            <li>• Centralised ordering and billing</li>
           </ul>
         </div>
 
         <div className="price-box">
           <h3>Save 8% – 18%</h3>
           <p>
-            Average savings compared to unstructured local market purchases,
-            depending on category and volume.
+            Average savings compared to local market procurement.
           </p>
         </div>
       </section>
 
-      {/* FINAL CTA */}
+      {/* FINAL CTA — FIXED */}
       <section className="final-cta">
         <div>
-          <h2>Start Smarter Bulk Procurement</h2>
+          <h2>Ready to Get Started?</h2>
           <p>
-            Move away from unreliable sourcing. Get consistent supply, clear
-            pricing and dependable delivery with EVORA.
+            Create an account or login to start bulk procurement with EVORA.
           </p>
         </div>
-        <button>Request a Business Account</button>
+        <button onClick={() => navigate("/auth")}>
+          Create or Login to Account
+        </button>
       </section>
 
     </div>
