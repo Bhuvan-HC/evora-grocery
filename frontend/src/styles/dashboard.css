@@ -198,3 +198,61 @@
   align-items: center;
   gap: 8px;
 }
+/* ---------------- MOBILE RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+
+  .dash-body {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hide sidebar on mobile */
+  .dash-sidebar {
+    display: none;
+  }
+
+  .dash-main {
+    padding: 16px;
+  }
+
+  /* KPI stack */
+  .kpi-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .kpi-strip div {
+    padding: 14px;
+  }
+
+  /* Panels spacing */
+  .panel {
+    padding: 16px;
+  }
+
+  /* Actions stack */
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Two-column grids become one */
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Header adjustments */
+  .dash-top {
+    padding: 0 14px;
+  }
+
+  .brand h1 {
+    font-size: 16px;
+  }
+
+  .business-name {
+    display: none;
+  }
+}

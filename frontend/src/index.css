@@ -10,3 +10,11 @@
 .animate-spin-slow {
   animation: spin-slow 6s linear infinite;
 }
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

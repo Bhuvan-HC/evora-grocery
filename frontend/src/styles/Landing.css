@@ -1,309 +1,161 @@
-/* ===== LANDING BASE ===== */
-.landing {
-  background: #ffffff;
-  color: #111;
-  padding: 40px 80px;
-}
-
-/* ===== HERO ===== */
+/* -------- HERO -------- */
 .hero {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 40px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  padding: 80px 80px 60px;
   align-items: center;
-  margin-bottom: 60px;
+  background: linear-gradient(180deg, #f7faf7, #ffffff);
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 46px;
+  font-weight: 700;
   line-height: 1.1;
-  font-weight: 800;
+  color: #1f2d1f;
 }
 
 .hero p {
-  margin-top: 14px;
-  font-size: 18px;
-  color: #444;
-  max-width: 600px;
+  margin-top: 16px;
+  font-size: 16px;
+  color: #4d5d4d;
+  max-width: 520px;
 }
 
 .hero-cta {
-  margin-top: 22px;
   display: flex;
-  gap: 20px;
+  gap: 16px;
+  margin-top: 28px;
 }
 
 .hero-cta button {
-  padding: 14px 34px;
-  border-radius: 999px;
-  border: none;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+  border: none;
 }
 
 .hero-cta .primary {
-  background: linear-gradient(135deg, #16a34a, #22c55e);
+  background: #2e7d32;
   color: white;
-  box-shadow: 0 15px 40px rgba(34, 197, 94, 0.45);
 }
 
 .hero-cta .secondary {
-  background: #f4f4f5;
-  color: #111;
+  background: #f1f5f1;
+  color: #2e7d32;
 }
 
-/* ===== STATS ===== */
+/* -------- STATS -------- */
 .stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  margin-bottom: 70px;
+  padding: 40px 80px;
+  background: #f8fbf8;
+  gap: 20px;
 }
 
-.stat {
-  background: #fafafa;
-  padding: 24px;
-  border-radius: 18px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+.stats div {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  text-align: center;
 }
 
-.stat h3 {
-  font-size: 26px;
-  font-weight: 700;
-}
-
-.stat p {
-  font-size: 14px;
-  color: #555;
-}
-
-/* ===== SERVE ===== */
+/* -------- SERVE -------- */
 .serve {
-  margin-bottom: 70px;
-}
-
-.serve h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  padding: 70px 80px;
 }
 
 .serve-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
 .serve-card {
-  padding: 22px;
-  border-radius: 20px;
-  background: linear-gradient(180deg, #ffffff, #f7f7f7);
-  border: 1px solid #eee;
+  background: white;
+  padding: 26px;
+  border-radius: 18px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.05);
 }
 
-/* ===== PRICE ADVANTAGE ===== */
+/* -------- PRICE ADV -------- */
 .price-adv {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 70px 80px;
   gap: 40px;
-  align-items: center;
-  margin-bottom: 70px;
+  background: #f7faf7;
 }
 
-.price-box {
-  background: #0b0b0b;
-  color: white;
-  padding: 40px;
-  border-radius: 30px;
-}
-
-.price-box h3 {
-  font-size: 32px;
-}
-
-.price-box p {
-  color: #bbb;
-  margin-top: 10px;
-}
-
-/* ===== CTA ===== */
+/* -------- FINAL CTA -------- */
 .final-cta {
-  background: linear-gradient(135deg, #0f172a, #020617);
+  padding: 60px 80px;
+  background: linear-gradient(135deg, #2e7d32, #43a047);
   color: white;
-  padding: 50px;
-  border-radius: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .final-cta button {
-  padding: 16px 42px;
-  border-radius: 999px;
+  background: white;
+  color: #2e7d32;
+  padding: 14px 30px;
+  border-radius: 10px;
   border: none;
-  font-size: 16px;
   font-weight: 600;
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-  color: white;
-}
-/* =========================
-   GLOBAL POLISH
-   ========================= */
-
-.landing h1,
-.landing h2,
-.landing h3 {
-  letter-spacing: -0.5px;
+  cursor: pointer;
 }
 
-.landing section {
-  scroll-margin-top: 80px;
-}
+/* ================= MOBILE FIX ================= */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 40px 18px;
+  }
 
-/* =========================
-   HERO ENHANCEMENTS
-   ========================= */
+  .hero h1 {
+    font-size: 28px;
+  }
 
-.hero h1 {
-  background: linear-gradient(
-    90deg,
-    #0f172a,
-    #14532d,
-    #166534
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+  .hero-cta {
+    flex-direction: column;
+  }
 
-.hero {
-  position: relative;
-}
+  .hero-cta button {
+    width: 100%;
+  }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: -40px;
-  background: radial-gradient(
-    circle at 20% 20%,
-    rgba(34, 197, 94, 0.12),
-    transparent 60%
-  );
-  z-index: -1;
-}
+  .stats {
+    grid-template-columns: 1fr 1fr;
+    padding: 24px 18px;
+  }
 
-/* =========================
-   CTA BUTTON MICRO-DEPTH
-   ========================= */
+  .serve {
+    padding: 40px 18px;
+  }
 
-.hero-cta .primary {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
+  .serve-grid {
+    grid-template-columns: 1fr;
+  }
 
-.hero-cta .primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 25px 60px rgba(34, 197, 94, 0.6);
-}
+  .price-adv {
+    grid-template-columns: 1fr;
+    padding: 40px 18px;
+  }
 
-.hero-cta .secondary {
-  transition: background 0.3s ease, transform 0.3s ease;
-}
+  .final-cta {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding: 40px 18px;
+  }
 
-.hero-cta .secondary:hover {
-  background: #e5e7eb;
-  transform: translateY(-2px);
-}
-
-/* =========================
-   STATS: MORE DENSITY
-   ========================= */
-
-.stat {
-  position: relative;
-  overflow: hidden;
-}
-
-.stat::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(34, 197, 94, 0.08),
-    transparent
-  );
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.stat:hover::before {
-  opacity: 1;
-}
-
-.stat h3 {
-  color: #14532d;
-}
-
-/* =========================
-   SERVE CARDS: REAL B2B FEEL
-   ========================= */
-
-.serve-card {
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.serve-card strong {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 16px;
-}
-
-.serve-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-}
-
-/* =========================
-   PRICE ADVANTAGE SECTION
-   ========================= */
-
-.price-adv h2 {
-  font-size: 34px;
-}
-
-.price-adv p {
-  max-width: 520px;
-  color: #444;
-}
-
-.price-box {
-  position: relative;
-  overflow: hidden;
-}
-
-.price-box::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at top right,
-    rgba(34, 197, 94, 0.25),
-    transparent 55%
-  );
-}
-
-/* =========================
-   FINAL CTA — BUSINESS CONFIDENCE
-   ========================= */
-
-.final-cta h2 {
-  font-size: 34px;
-}
-
-.final-cta button {
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.final-cta button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 25px 60px rgba(34, 197, 94, 0.55);
+  .final-cta button {
+    width: 100%;
+  }
 }
